@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-family:Monospace;
+            font-size:13px;
+            text-align:center;
+            font-weight: bold;
+            background-color: #000;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #info {
+            position: absolute;
+            top: 0px; width: 100%;
+            padding: 5px;
+        }
+
+        a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="info">defineproperty</Object>
+    </div>
+    <script>
+           //例1：属性值无法修改----configurable
+           var Person = {}
+           Object.defineProperty(Person,name,{
+               value:'阿毛'
+           })
+           Person.value = '阿姨'
+           console.log('Person',Person.value)//阿姨
+
+           var Animals = {}
+           Object.defineProperty(Animals,name,{
+               value:'dog',
+               configurable: false,
+               writable: false
+           })
+        //    Animals.name = 'cat'
+           console.log('Animals',Animals.name)//cat 可以赋值
+           delete Animals.name
+           console.log(Animals.name)//undefind
+    </script>
+</body>
+</html>
