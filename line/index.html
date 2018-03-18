@@ -49,8 +49,8 @@
             renderer = new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth,window.innerHeight)
             container.appendChild(renderer.domElement)
-            //场景 生成几何体
-            var curve3 = new THREE.SplineCurve3([new THREE.Vector3(0,0,0),new THREE.Vector3(0,100,0)])
+            //场景 生成几何体 SplineCurve3绘制线条
+            var curve3 = new THREE.SplineCurve3([new THREE.Vector3(0,0,0),new THREE.Vector3(0,100,0),new THREE.Vector3(50,100,0)])
             //tubeGeometry
             //曲线 段数 半径 半径的段数（柱体，圆锥）闭合不闭合 
             var tubeGeometry = new THREE.TubeGeometry(curve3,10,4,4,false);
