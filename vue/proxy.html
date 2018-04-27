@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    姓名：<input type="text" name="username">
+    年龄：<input type="text" name="age">
+    <button id="btn_up">+1</button>
+    <button id="btn_down">-1</button>
+    <button id="btn_clear">清空</button>
+</body>
+</html>
+<script src="jquery.js"></script>
+<script>
+    var data = {
+        username:'小王',
+        age:11
+    }
+    var proxy = new Proxy(data,{
+        set: function(obj, prop, value){
+            obj[prop] = value
+            $('input[name='+prop+']').val(value)
+        }
+    })
+//    $('input[name=username]').val(data.username).on('input',function(){
+//        data.name = parseInt(this.value,10)
+//    })
+
+    $('input[name=age]').val(data.age).on('input',function(){
+        data.age = parseInt(this.value,10)
+    })
+
+    $('#btn_up').on('click', function(){
+        proxy.age += 1
+    })
+
+    $('#btn_down').on('click', function(){
+        proxy.age -= 1
+    })
+
+    $('#btn_clear').on('click', function(){
+        proxy.age = ''
+        proxy.name = ''
+    })
+
+</script>
