@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deepClone</title>
+</head>
+<body>
+
+</body>
+<script>
+//    实现一个深拷贝
+    var data = [
+        {a:'b'},{a:{b:{c:'d'}}},{b:'c'},'p'
+    ]
+    function deepClone(obj) {
+        var newObj = obj instanceof Array ? [] : {};
+        if(typeof obj!='object'){
+            return obj
+        }else {
+            for(var i in obj) {
+                newObj[i] = typeof obj[i] === 'object' ? deepClone(obj[i]):obj[i];
+            }
+        }
+        return newObj
+    }
+    var new_data  = deepClone(data)
+    console.log(new_data)
+</script>
+</html>

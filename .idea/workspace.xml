@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e696ed79-7b18-4a09-94ff-f31cc4f2c805" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/proxy.html" afterPath="$PROJECT_DIR$/vue/proxy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES5/deepClone.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="proxy.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="proxy.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/proxy.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deepClone.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ES5/deepClone.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -32,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,6 +56,7 @@
       <list>
         <option value="$PROJECT_DIR$/vue/jquery.js" />
         <option value="$PROJECT_DIR$/vue/proxy.html" />
+        <option value="$PROJECT_DIR$/ES5/deepClone.html" />
       </list>
     </option>
   </component>
@@ -98,7 +110,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
+              <option name="myItemId" value="ES5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -127,8 +139,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.proxy.html">
+  <component name="RunManager" selected="JavaScript Debug.deepClone.html">
     <configuration default="false" name="proxy.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/vue/proxy.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="deepClone.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/ES5/deepClone.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -191,12 +206,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.deepClone.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.deepClone.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
       </list>
     </recent_temporary>
   </component>
@@ -210,12 +227,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524816120295</updated>
-      <workItem from="1524816122128" duration="6143000" />
+      <workItem from="1524816122128" duration="7893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6143000" />
+    <option name="totallyTimeSpent" value="7893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
@@ -264,6 +281,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES5/deepClone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding />
         </state>
       </provider>
