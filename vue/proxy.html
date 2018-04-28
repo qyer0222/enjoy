@@ -21,16 +21,15 @@
     var proxy = new Proxy(data,{
         set: function(obj, prop, value){
             obj[prop] = value
+            console.log(obj)
             $('input[name='+prop+']').val(value)
         }
     })
-//    $('input[name=username]').val(data.username).on('input',function(){
-//        data.name = parseInt(this.value,10)
-//    })
-
     $('input[name=age]').val(data.age).on('input',function(){
         data.age = parseInt(this.value,10)
     })
+
+    $('input[name=username]').val(data.username)
 
     $('#btn_up').on('click', function(){
         proxy.age += 1
@@ -41,8 +40,8 @@
     })
 
     $('#btn_clear').on('click', function(){
-        proxy.age = ''
-        proxy.name = ''
+        proxy.age = null
+        proxy.username = null
     })
 
 </script>
