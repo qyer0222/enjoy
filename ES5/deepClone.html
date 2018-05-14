@@ -12,6 +12,7 @@
     var data = [
         {a:'b'},{a:{b:{c:'d'}}},{b:'c'},'p'
     ]
+    var data1 = 'abc'
     function deepClone(obj) {
         var newObj = obj instanceof Array ? [] : {};
         if(typeof obj!='object'){
@@ -24,6 +25,7 @@
         return newObj
     }
     var new_data  = deepClone(data)
-    console.log(new_data)
+    var new_data1 = deepClone(data1)
+    console.log(new_data,new_data1)
 </script>
 </html>
