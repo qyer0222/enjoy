@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e696ed79-7b18-4a09-94ff-f31cc4f2c805" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/extend.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6/promise_demo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ES5/deepClone.html" afterPath="$PROJECT_DIR$/ES5/deepClone.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ES6/promise.html" afterPath="$PROJECT_DIR$/ES6/promise.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="promise.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="promise.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ES6/promise.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="340">
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promise_demo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ES6/promise_demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -96,6 +105,8 @@
         <option value="$PROJECT_DIR$/ES5/deepClone.html" />
         <option value="$PROJECT_DIR$/vue/extend.html" />
         <option value="$PROJECT_DIR$/ES6/promise.html" />
+        <option value="$PROJECT_DIR$/ES5/继承.html" />
+        <option value="$PROJECT_DIR$/ES6/promise_demo.html" />
       </list>
     </option>
   </component>
@@ -206,7 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.promise.html">
+  <component name="RunManager" selected="JavaScript Debug.promise_demo.html">
     <configuration default="false" name="proxy.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/vue/proxy.html">
       <method />
     </configuration>
@@ -217,6 +228,9 @@
       <method />
     </configuration>
     <configuration default="false" name="promise.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/ES6/promise.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="promise_demo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/ES6/promise_demo.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -285,18 +299,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.deepClone.html" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.extend.html" />
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.promise.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.promise_demo.html" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.promise.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.extend.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.deepClone.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.promise_demo.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.promise.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.extend.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.deepClone.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.proxy.html" />
       </list>
     </recent_temporary>
   </component>
@@ -313,12 +329,12 @@
       <workItem from="1524816122128" duration="15637000" />
       <workItem from="1525848368377" duration="584000" />
       <workItem from="1525935032481" duration="599000" />
-      <workItem from="1526286684320" duration="2551000" />
+      <workItem from="1526286684320" duration="8304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19371000" />
+    <option name="totallyTimeSpent" value="25124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
@@ -513,10 +529,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ES5/继承.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ES6/promise.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        <state relative-caret-position="340">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6/promise_demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -17,7 +17,6 @@
         var state = 'pending'
         var value = null
         var callbacks = [] // callbacks为数组，因为可能同时有很多个回调
-
         this.then = function (onFulfilled) {
             if (state === 'pending') {
                 callbacks.push(onFulfilled);
@@ -26,7 +25,6 @@
             onFulfilled(value)
             return this
         }
-
         function resolve (value) {
             value = newValue
             state = 'fulfilled'
@@ -36,7 +34,6 @@
                 })
             }, 0)
         }
-
         fn(resolve);
     }
     var fn = function () {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let controlStatus = true;
+    function runAsync(){
+        var p = new Promise(function (resolve,reject) {
+            console.log('访问第一个ajax，获取data1')
+            var data1 = {
+                a:1,
+                b:2,
+                c:3
+            }
+            resolve(data1);
+        })
+        return p
+    }
+    function runAsync2(data){
+        var p = new Promise(function (resolve,reject) {
+            console.log('访问第二个ajax，获取data2')
+            var data2 = {
+                a:21,
+                b:22,
+                c:23
+            }
+            console.log(data2)
+            resolve(data2);
+        })
+        return p
+    }
+
+    runAsync().then(function(data){
+//        console.log(runAsync())
+        console.log('获取到的data1数据是：'+ JSON.stringify(data))
+        return runAsync2(data);
+    }).then(function(data){
+        console.log('获取到的data3数据是：'+ JSON.stringify(data))
+    });
+</script>
