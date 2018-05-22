@@ -5,12 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-
+<a href="https://open.work.weixin.qq.com/wwopen/sso/qrConnect?appid=ww100000a5f2191&agentid=1000000&redirect_uri=http%3A%2F%2Fwww.oa.com&state=web_login@gyoss9">这是一个连接</a>
 </body>
 </html>
+　<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 <script>
-    let controlStatus = true;
-    function runAsync(){
+    window.WwLogin({
+        "id" : "wx_reg",
+        "appid" : "",
+        "agentid" : "",
+        "redirect_uri" :"",
+        "state" : "",
+        "href" : "",
+    });
+</script>
+<script>
+    //    let controlStatus = true;
+
+    function runAsync1(){
         var p = new Promise(function (resolve,reject) {
             console.log('访问第一个ajax，获取data1')
             var data1 = {
@@ -19,28 +31,103 @@
                 c:3
             }
             resolve(data1);
+//            reject('数据没有获取到');
         })
         return p
     }
     function runAsync2(data){
         var p = new Promise(function (resolve,reject) {
             console.log('访问第二个ajax，获取data2')
+            var data1 = data
             var data2 = {
                 a:21,
                 b:22,
                 c:23
             }
-            console.log(data2)
-            resolve(data2);
+            resolve({data1,data2});
         })
         return p
     }
+    function runAsync3(data1,data2){
+        var p = new Promise(function (resolve,reject) {
+            console.log('访问第三个ajax，获取data3')
+            var data1 = data1
+            var data2 = data2
+            var data3 = {
+                a:31,
+                b:32,
+                c:33
+            }
+            resolve({data1,data2,data3});
+        })
+        return p
+    }
+//    runAsync1().then(function(data){
+//        console.log('获取到的data1数据是：'+ JSON.stringify(data))
+//        return runAsync2(data);
+//    }).then(function(data){
+//        console.log('注意resolve只能传一个参数')
+//        console.log('获取到的data2数据是：'+ JSON.stringify(data))
+//        return runAsync3(data)
+//    }).then(function(data){
+//        console.log('获取到的data3数据是：'+ JSON.stringify(data))
+//    })
 
-    runAsync().then(function(data){
-//        console.log(runAsync())
-        console.log('获取到的data1数据是：'+ JSON.stringify(data))
-        return runAsync2(data);
-    }).then(function(data){
-        console.log('获取到的data3数据是：'+ JSON.stringify(data))
-    });
+
+
+
+    (async () => {
+        let data1 = await runAsync1()
+        let data2= await runAsync2(data1)
+        let data3= await runAsync2(data1,data2)
+        console.log(data3);
+    })()
+
+
+
+//    all方法
+//    Promise
+//        .all([runAsync1(), runAsync2(), runAsync3()])
+//        .then(function(results){
+//            console.log(results);
+//        });
+
+//    Promise
+//        .race([runAsync1(), runAsync2(), runAsync3()])
+//        .then(function(results){
+//            console.log(results);
+//        });
+
+
+
+//    race的例子
+//    function requestImg(){
+//        var p = new Promise(function(resolve, reject){
+//            var img = new Image();
+//            img.onload = function(){
+//                resolve(img);
+//            }
+//            img.src = 'xxxxxx';
+//        });
+//        return p;
+//    }
+//
+//    //延时函数，用于给请求计时
+//    function timeout(){
+//        var p = new Promise(function(resolve, reject){
+//            setTimeout(function(){
+//                reject('图片请求超时');
+//            }, 2000);
+//        });
+//        return p;
+//    }
+//
+//    Promise
+//        .race([requestImg(), timeout()])
+//        .then(function(results){
+//            console.log(results);
+//        })
+//        .catch(function(reason){
+//            console.log(reason);
+//        });
 </script>

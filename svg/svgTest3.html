@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg{
+            width: 1000px;
+            height:1000px;
+        }
+    </style>
+
+</head>
+<body>
+<svg >
+    <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="7"
+            orient="auto">
+        <path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" />
+    </marker>
+</svg>
+</body>
+</html>
+<script>
+    //    var x = 100;
+    //    var y = 100;
+    //    var height = 30;
+    //    var width = 100;
+    //    var data = {
+    //        x:100,
+    //        y:100,
+    //        height:30,
+    //        width:100,
+    //        id:1.1,
+    //        name:'配置安全基线内容'
+    //    }
+    var defs=document.createElementNS("http://www.w3.org/2000/svg","defs");
+//    defs.appendChild(getSvgMarker("arrow","#7D7D7D"));//正常颜色
+    document.body.getElementsByTagName('svg')[0].appendChild(defs);
+    var arr1 = [{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.1,
+        name:'1.1配置安全基线内容'
+    },{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.2,
+        name:'1.2配置安全管控流程'
+    },{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.3,
+        name:'1.3安全需求立项确认'
+    }];
+
+    var arr2 = [{
+        x:200,
+        y:0,
+        height:30,
+        width:100,
+        id:1.1,
+        name:'2.1发布安全设计文档'
+    },{
+        x:200,
+        y:0,
+        height:30,
+        width:100,
+        id:1.2,
+        name:'2.2安全设计培训'
+    }];
+    //画第一栏
+    for(var i=0;i<arr1.length;i++){
+        arr1[i].y += 100*i;
+        createNode(arr1[i])
+    }
+    //华第二栏
+    for(var i=0;i<arr2.length;i++){
+        arr2[i].y += 100*i;
+        createNode(arr2[i])
+    }
+    var line1 = arr1.length;
+    var line2 = arr2.length;
+    var linesplit2 = {
+        x1:100,
+        y1:(line1-1)*100+20,
+        x2:120,
+        y2:(line1-1)*100+20,
+        x3:120,
+        y3:10,
+        x4:100+7,
+        y4:10,
+    }
+    var endsplit1 = {
+        x1:50,
+        y1:30+(line1-1)*100,
+        x2:50,
+        y2:20+30+(line1-1)*100,
+        x3:50+100,
+        y3:50+(line1-1)*100,
+        x4:50+100,
+        y4:15,
+        x5:200-7,
+        y5:15,
+    }
+    var endsplit2 = {
+        x1:50+200,
+        y1:30+(line2-1)*100,
+        x2:50+200,
+        y2:20+30+(line2-1)*100,
+        x3:50+100+200,
+        y3:50+(line2-1)*100,
+        x4:50+100+200,
+        y4:15,
+        x5:200-7+200,
+        y5:15,
+    }
+
+    if(arr1.length!=0){
+        if(arr1.length>=3){
+            createLine4(linesplit2)
+        }
+        if(arr2.length!=0){
+            createLine5(endsplit1)
+        }
+    }
+    if(arr2.length!=0){
+        if(arr2.length>=2){
+            createLine5(endsplit2)
+        }else {
+            createLine5(endsplit2)
+        }
+
+    }
+    function createNode(data) {
+        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        var svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+
+        svgDom.setAttribute('width', data.width);
+        svgDom.setAttribute('height', data.height);
+        svgDom.setAttribute("x", data.x);
+        svgDom.setAttribute("y", data.y);
+        svgDom.setAttribute("stroke", 'black');
+        svgDom.setAttribute("fill", "#fff");//0表示未通过矩形的填充颜色为黄
+
+        text.setAttribute("x", data.x);
+        text.setAttribute("y", data.y+20);
+
+        text.setAttribute("fill", "#FB923F");
+        text.style.fontSize = "0.6em";
+        text.textContent = data.name;
+        svgDom.addEventListener("click", function () {
+            alert('1');
+        });
+        document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
+        document.body.getElementsByTagName('svg')[0].appendChild(text);
+    }
+    function createLine5(linesplit) {
+        var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        linePath.setAttribute("marker-end","url(#markerArrow)");
+        linePath.setAttribute('fill', 'none');
+        linePath.setAttribute('stroke', 'black');
+        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4)+' '+(linesplit.x5 + ','+linesplit.y5));
+//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
+//        linePath.setAttribute('d', 'M 0 0 L 60 0');
+        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
+    }
+    function createLine4(linesplit) {
+        var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        linePath.setAttribute("marker-end","url(#markerArrow)");
+        linePath.setAttribute('fill', 'none');
+        linePath.setAttribute('stroke', 'black');
+        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4));
+//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
+//        linePath.setAttribute('d', 'M 0 0 L 60 0');
+        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
+    }
+
+
+    function createNode2() {
+        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        var svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+
+        svgDom.setAttribute('width', '100');
+        svgDom.setAttribute('height', '100');
+        svgDom.setAttribute("x", '120');
+        svgDom.setAttribute("y", '120');
+
+        svgDom.setAttribute("fill", "#FB923F");//0表示未通过矩形的填充颜色为黄
+        text.setAttribute("x", '20');
+        text.setAttribute("y", '20');
+        text.setAttribute("text-anchor", "middle");
+        text.style.fontSize = "0.9em";
+        text.textContent = '神经病';
+        svgDom.addEventListener("click", function () {
+            alert('1');
+        });
+        document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
+        document.body.getElementsByTagName('svg')[0].appendChild(text);
+    }
+
+//    createNode2()
+</script>
