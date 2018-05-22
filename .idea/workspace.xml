@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e696ed79-7b18-4a09-94ff-f31cc4f2c805" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/svgTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/svgTest2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/svgTest3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ES6/promise_demo.html" afterPath="$PROJECT_DIR$/ES6/promise_demo.html" />
-    </list>
+    <list default="true" id="e696ed79-7b18-4a09-94ff-f31cc4f2c805" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -67,8 +60,8 @@
       <file leaf-file-name="svgTest3.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svg/svgTest3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#path#0;n#marker#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -375,12 +368,12 @@
       <workItem from="1524816122128" duration="15637000" />
       <workItem from="1525848368377" duration="584000" />
       <workItem from="1525935032481" duration="599000" />
-      <workItem from="1526286684320" duration="45229000" />
+      <workItem from="1526286684320" duration="45240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62049000" />
+    <option name="totallyTimeSpent" value="62060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
@@ -628,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svg/svgTest3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+        <state relative-caret-position="270">
+          <caret line="63" column="12" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#path#0;n#marker#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
