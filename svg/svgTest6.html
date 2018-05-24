@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg{
+            width: 1500px;
+            height:1500px;
+            font-family:Verdana,Times New Roman;
+        }
+        #markerArrow{
+            stroke-dasharray: 100; stroke-dashoffset: 0; animation: dash 2s linear infinite;
+        }
+        polyline { stroke-dasharray: 2000; stroke-dashoffset: 0; animation: dash 2s linear; }
+        @keyframes dash { from { stroke-dashoffset: 2000; } to { stroke-dashoffset: 0; } }
+    </style>
+
+</head>
+<body>
+<h1>备注：实际界面删除按钮和箭头是不能同时出现的，这个地方的交叉覆盖是合理的，后期会分开，数据样式等没有对接，只作为demo展示查看功能实现效果</h1>
+<svg >
+
+</svg>
+<svg>
+    <!--<marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="7"-->
+            <!--orient="auto">-->
+        <!--<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>-->
+    <!--</marker>-->
+</svg>
+</body>
+</html>
+<script>
+    //    var x = 100;
+    //    var y = 100;
+    //    var height = 30;
+    //    var width = 100;
+    //    var data = {
+    //        x:100,
+    //        y:100,
+    //        height:30,
+    //        width:100,
+    //        id:1.1,
+    //        name:'配置安全基线内容'
+    //    }
+    var defs=document.createElementNS("http://www.w3.org/2000/svg","defs");
+    //    defs.appendChild(getSvgMarker("arrow","#7D7D7D"));//正常颜色
+    document.body.getElementsByTagName('svg')[0].appendChild(defs);
+    var arr1 = [{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.1,
+        name:'1.1配置安全基线内容',
+        status:false
+    },{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.2,
+        name:'1.2配置安全管控流程',
+        status:false
+    },{
+        x:0,
+        y:0,
+        height:30,
+        width:100,
+        id:1.3,
+        name:'1.3安全需求立项确认',
+        status:true
+    }];
+
+    var arr2 = [{
+        x:200,
+        y:0,
+        height:30,
+        width:100,
+        id:2.1,
+        name:'2.1发布安全设计文档',
+        status:true
+    },{
+        x:200,
+        y:0,
+        height:30,
+        width:100,
+        id:2.2,
+        name:'2.2安全设计培训',
+        status:true
+    }];
+
+    var arr3 = [{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.1,
+        name:'3.1代码提交',
+        status:true
+    },{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.2,
+        name:'3.2自动化基线扫描',
+        status:false
+    },{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.3,
+        name:'3.3代码安全确认',
+        status:true
+    },{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.4,
+        name:'3.4代码问题整改',
+        status:true
+    },{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.5,
+        name:'3.5代码整改确认',
+        status:false
+    },{
+        x:400,
+        y:0,
+        height:30,
+        width:100,
+        id:3.6,
+        name:'3.6编码完成确认',
+        status:false
+    }];
+
+
+    var arr4 = [{
+        x:600,
+        y:0,
+        height:30,
+        width:100,
+        id:4.1,
+        name:'4.1提交基线检测',
+        status:true
+    },{
+        x:600,
+        y:0,
+        height:30,
+        width:100,
+        id:4.2,
+        name:'4.2自动化基线扫描',
+        status:false
+    },{
+        x:600,
+        y:0,
+        height:30,
+        width:100,
+        id:4.3,
+        name:'4.3人工基线检测',
+        status:true
+    },{
+        x:600,
+        y:0,
+        height:30,
+        width:100,
+        id:4.4,
+        name:'4.4基线安全确认',
+        status:false
+    }];
+
+    var arr5 = [{
+        x:800,
+        y:0,
+        height:30,
+        width:100,
+        id:5.1,
+        name:'5.1人工基线检测问题整改',
+        status:true
+    },{
+        x:800,
+        y:0,
+        height:30,
+        width:100,
+        id:5.2,
+        name:'5.2人工基线检测整改确认',
+        status:false
+    },{
+        x:800,
+        y:0,
+        height:30,
+        width:100,
+        id:5.3,
+        name:'5.3自动化基线扫描问题整改',
+        status:true
+    },{
+        x:800,
+        y:0,
+        height:30,
+        width:100,
+        id:5.4,
+        name:'5.4自动化基线扫描整改确认',
+        status:false
+    }];
+
+    var arr6 = [{
+        x:1000,
+        y:0,
+        height:30,
+        width:100,
+        id:6.1,
+        name:'6.1应用官方签名',
+        status:true
+    },{
+        x:1000,
+        y:0,
+        height:30,
+        width:100,
+        id:6.2,
+        name:'6.2发布',
+        status:true
+    }];
+
+    function renderRect() {
+        document.querySelector('svg').innerHTML = '';
+        //画第一栏
+        var arr1Copy = deepClone(arr1)
+        for(var i=0;i<arr1Copy.length;i++){
+            arr1Copy[i].y += 100*i;
+            createNode(arr1Copy[i])
+        }
+        //画第二栏
+        var arr2Copy = deepClone(arr2)
+        for(var i=0;i<arr2Copy.length;i++){
+            arr2Copy[i].y += 100*i;
+            createNode(arr2Copy[i])
+        }
+        //画第三栏
+        var arr3Copy = deepClone(arr3)
+        for(var i=0;i<arr3Copy.length;i++){
+            arr3Copy[i].y += 100*i;
+            createNode(arr3Copy[i])
+        }
+        //画第四栏
+        var arr4Copy = deepClone(arr4)
+        for(var i=0;i<arr4Copy.length;i++){
+            arr4Copy[i].y += 100*i;
+            createNode(arr4Copy[i])
+        }
+        //画第五栏
+        var arr5Copy = deepClone(arr5)
+        for(var i=0;i<arr5Copy.length;i++){
+            arr5Copy[i].y += 100*i;
+            createNode(arr5Copy[i])
+        }
+        //画第六栏
+        var arr6Copy = deepClone(arr6)
+        for(var i=0;i<arr6Copy.length;i++){
+            arr6Copy[i].y += 100*i;
+            createNode(arr6Copy[i])
+        }
+    }
+    renderRect();
+    renderLine();
+    function renderLine(){
+        var line1 = arr1.length;
+        var line2 = arr2.length;
+        var line3 = arr3.length;
+        var line4 = arr4.length;
+        var line5 = arr5.length;
+        var linesplit2 = {
+            x1:100,
+            y1:(line1-1)*100+20,
+            x2:120,
+            y2:(line1-1)*100+20,
+            x3:120,
+            y3:10,
+            x4:100+7,
+            y4:10
+        }
+        var linesplit3_1= {
+            x1:50+400+50,
+            y1:30+(line3-1)*100-15,
+            x2:50+400+50+20,
+            y2:30+(line3-1)*100-15,
+            x3:50+400+50+20,
+            y3:15,
+            x4:50+400+50+20+7-20,
+            y4:15
+        }
+        var linesplit3_2= {
+            x1:50+400+50-100,
+            y1:(line3-2)*100+15,
+            x2:50+400+50-100-15,
+            y2:(line3-2)*100+15,
+            x3:50+400+50-100-15,
+            y3:(line3-3)*100+15,
+            x4:50+400+50-100-7,
+            y4:(line3-3)*100+15
+        }
+        var linesplit3_3= {
+            x1:50+400+50-100,
+            y1:2*100+15,
+            x2:50+400+50-100-30,
+            y2:2*100+15,
+            x3:50+400+50-100-30,
+            y3:(line3-1)*100+15,
+            x4:50+400+50-100-7,
+            y4:(line3-1)*100+15
+        }
+        var linesplit5_1= {
+            x1:50+800+50,
+            y1:100+15,
+            x2:50+800+50+30,
+            y2:100+15,
+            x3:50+800+50+30,
+            y3:15,
+            x4:50+800+50+7,
+            y4:15
+        }
+        var linesplit5_2= {
+            x1:50+800+50,
+            y1:(line5-1)*100+15,
+            x2:50+800+50+30,
+            y2:(line5-1)*100+15,
+            x3:50+800+50+30,
+            y3:(line5-2)*100+15,
+            x4:50+800+50+7,
+            y4:(line5-2)*100+15
+        }
+        var endsplit1 = {
+            x1:50,
+            y1:30+(line1-1)*100,
+            x2:50,
+            y2:20+30+(line1-1)*100,
+            x3:50+100,
+            y3:50+(line1-1)*100,
+            x4:50+100,
+            y4:15,
+            x5:200-7,
+            y5:15
+        }
+        var endsplit2 = {
+            x1:50+200,
+            y1:30+(line2-1)*100,
+            x2:50+200,
+            y2:20+30+(line2-1)*100,
+            x3:50+100+200,
+            y3:50+(line2-1)*100,
+            x4:50+100+200,
+            y4:15,
+            x5:200-7+200,
+            y5:15
+        }
+        var endsplit3 = {
+            x1:50+400,
+            y1:30+(line3-1)*100,
+            x2:50+400,
+            y2:20+30+(line3-1)*100,
+            x3:50+100+400,
+            y3:50+(line3-1)*100,
+            x4:50+100+400,
+            y4:15,
+            x5:200-7+400,
+            y5:15
+        }
+        var endsplit4 = {
+            x1:50+600+50,
+            y1:(line4-1)*100+15,
+            x2:50+600+100,
+            y2:(line4-1)*100+15,
+            x3:50+100+600,
+            y3:15,
+            x4:100+600+7+50+50-14,
+            y4:15
+        }
+        var endsplit1_3 = {
+            x1:50,
+            y1:30+(line1-1)*100,
+            x2:50,
+            y2:20+30+(line1-1)*100,
+            x3:50+100,
+            y3:50+(line1-1)*100,
+            x4:50+100,
+            y4:15,
+            x5:200-7+200,
+            y5:15
+        }
+        var endsplit1_4 = {
+            x1:50,
+            y1:30+(line1-1)*100,
+            x2:50,
+            y2:20+30+(line1-1)*100,
+            x3:50+100,
+            y3:50+(line1-1)*100,
+            x4:50+100,
+            y4:15,
+            x5:200-7+200+200,
+            y5:15
+        }
+        var endsplit1_6 = {
+            x1:50,
+            y1:30+(line1-1)*100,
+            x2:50,
+            y2:20+30+(line1-1)*100,
+            x3:50+100,
+            y3:50+(line1-1)*100,
+            x4:50+100,
+            y4:15,
+            x5:200-7+600+200,
+            y5:15
+        }
+        var endsplit2_4 = {
+            x1:50+200,
+            y1:30+(line2-1)*100,
+            x2:50+200,
+            y2:20+30+(line2-1)*100,
+            x3:50+100+200,
+            y3:50+(line2-1)*100,
+            x4:50+100+200,
+            y4:15,
+            x5:200-7+200+200,
+            y5:15
+        }
+        var endsplit4_6 = {
+            x1:50+600,
+            y1:30+(line4-1)*100,
+            x2:50+600,
+            y2:20+30+(line4-1)*100,
+            x3:50+100+600+200,
+            y3:50+(line4-1)*100,
+            x4:50+100+600+200,
+            y4:15,
+            x5:200-7+600+200,
+            y5:15
+        }
+        var endsplit5_4 = {
+            x1:50+600+200,
+            y1:30+(line5-1)*100,
+            x2:50+600+200,
+            y2:20+30+(line5-1)*100-10,
+            x3:50+100+600-20,
+            y3:50+(line5-1)*100-10,
+            x4:50+100+600-20,
+            y4:15,
+            x5:100+600+7,
+            y5:15
+        }
+        var endsplit2_6 = {
+            x1:50+200,
+            y1:30+(line2-1)*100,
+            x2:50+200,
+            y2:20+30+(line2-1)*100,
+            x3:50+100+200,
+            y3:50+(line2-1)*100,
+            x4:50+100+200,
+            y4:15,
+            x5:200-7+600+200,
+            y5:15
+        }
+        var endsplit3_6 = {
+            x1:50+400,
+            y1:30+(line3-1)*100,
+            x2:50+400,
+            y2:20+30+(line3-1)*100,
+            x3:50+400+200,
+            y3:20+30+(line3-1)*100,
+            x4:50+400+200,
+            y4:15,
+            x5:200-7+600+200,
+            y5:15
+        }
+        if(arr1.length!=0){
+            if(arr1.length>=3){
+                createLine4(linesplit2)
+            }
+            if(arr2.length!=0){
+                createLine5(endsplit1)
+            }
+            if(arr2.length===0){
+                //当数组三存在的时候1-3连线
+                if(arr3.length!=0){
+                    createLine5(endsplit1_3)
+                }else {
+                    if(arr4.length!=0){
+                        //当数组4存在的时候1-4连线
+                        createLine5(endsplit1_4)
+                    }else {
+                        if(arr5.length!=0){
+                            //当数组5存在的时候1-5连线（这种情况不存在）
+
+                        }else {
+                            if(arr6.length!=0){
+                                //当数组6存在的时候1-5连线（这种情况不存在）
+                                createLine5(endsplit1_6)
+                            }else {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if(arr2.length!=0){
+            // 2-3连线
+            if(arr3.length!=0){
+                createLine5(endsplit2)
+            }
+            if(arr3.length===0){
+                if(arr4.length!=0){
+                    //当数组4存在的时候2-4连线
+                    createLine5(endsplit2_4)
+                }else {
+                    if(arr5.length!=0){
+                        //当数组5存在的时候2-5连线（这种情况不存在）
+
+                    }else {
+                        if(arr6.length!=0){
+                            //当数组6存在的时候2-5连线（这种情况不存在）
+                            createLine5(endsplit2_6)
+                        }else {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        if(arr3.length!=0){
+            for( var item in arr3){
+                if(arr3[item].id===3.1){
+                    //3.6返回线渲染
+                    createLine4(linesplit3_1)
+                }
+                if(arr3[item].id===3.4){
+                    //3.5返回线渲染
+                    createLine4(linesplit3_2)
+                }
+                if(arr3[item].id===3.3){
+                    //3.3返回线渲染
+                    createLine4(linesplit3_3)
+                }
+            }
+            if(arr4.length!=0){
+                createLine5(endsplit3)
+            }
+            if(arr4.length===0){
+                // 数组4为0的话，5也必须为0，所以直接判断6
+                if(arr6.length!=0){
+                    //当数组6存在的时候3-6连线
+                    createLine5(endsplit3_6)
+                }else {
+
+                }
+            }
+        }
+
+        if(arr4.length!=0){
+            if(arr6.length!=0){
+                createLine5(endsplit4_6)
+            }
+            if(arr5.length===0){
+
+            }else {
+                createLine4(endsplit4)
+            }
+        }
+
+        if(arr5.length!=0){
+            for(var i=0;i<arr5.length;i++){
+                //有5.1的话，就5.2-5.1
+                if(arr5[i].id == 5.1 ){
+                    createLine4(linesplit5_1)
+                }
+                //有5.3的话，就5.2-5.1
+                if(arr5[i].id == 5.3 ){
+                    createLine4(linesplit5_2)
+                }
+                if(arr5[i].id===5.4){
+                    //有5.4的话，就5.4-4.1
+                    createLine5(endsplit5_4)
+                }
+            }
+        }
+
+
+    }
+    function createNode(data) {
+        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        var svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        var lineLeft = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        var lineRight = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        svgDom.setAttribute('width', data.width);
+        svgDom.setAttribute('height', data.height);
+        svgDom.setAttribute("x", data.x);
+        svgDom.setAttribute("y", data.y);
+        svgDom.setAttribute("stroke", 'black');
+        svgDom.setAttribute("fill", "#fff");//0表示未通过矩形的填充颜色为黄
+        svgDom.id = data.id;
+
+        text.setAttribute("x", data.x);
+        text.setAttribute("y", data.y+20);
+        text.setAttribute("fill", "#FB923F");
+        text.style.fontSize = "8px";
+        text.textContent = data.name;
+        // 正方形增加鼠标移入效果
+        svgDom.addEventListener("mousemove", function () {
+            this.style.cursor = 'pointer'
+        })
+        //文字增加鼠标移入效果
+        text.addEventListener("mousemove", function () {
+            this.style.cursor = 'pointer'
+        })
+        if(data.status){
+            circle.setAttribute("cx",data.x+106);
+            circle.setAttribute("cy",data.y+15);
+            circle.setAttribute("r","6");
+            circle.setAttribute("fill", "#fff");
+            circle.setAttribute("stroke", 'black');
+            lineLeft.setAttribute("d","M"+' '+ ((data.x+103) + ' '+(data.y+17)) +' '+"L"+' '+((data.x+109)+' '+(data.y+13)));
+            lineRight.setAttribute("d","M"+' '+ ((data.x+103) + ' '+(data.y+13)) +' '+"L"+' '+((data.x+109)+' '+(data.y+17)));
+            lineLeft.setAttribute('fill', 'none');
+            lineLeft.setAttribute('stroke', 'black');
+            lineRight.setAttribute('fill', 'none');
+            lineRight.setAttribute('stroke', 'black');
+            circle.id = data.id;
+            lineLeft.id = data.id;
+            lineRight.id = data.id;
+            //增加鼠标移入后出现小手指的效果
+            circle.addEventListener("mousemove", function () {
+                this.style.cursor = 'pointer'
+            })
+            lineLeft.addEventListener("mousemove", function () {
+                this.style.cursor = 'pointer'
+            })
+            lineRight.addEventListener("mousemove", function () {
+                this.style.cursor = 'pointer'
+            })
+            //圆环点击之后删除相应的id
+            circle.addEventListener("click", function () {
+                if(this.id==='1.3'){
+                    for( var item in arr1){
+                        if(arr1[item].id===1.3){
+                            arr1.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.1'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.1){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.2'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.2){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.1'){
+                    arr3.length=0;
+                }
+                if(this.id==='3.3'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.3){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.4'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.1'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.1){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.2){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.4){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.3'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.1'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.3'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.1'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.1){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.2'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.2){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                renderRect();
+                renderLine();
+            });
+            lineRight.addEventListener("click", function () {
+                if(this.id==='1.3'){
+                    for( var item in arr1){
+                        if(arr1[item].id===1.3){
+                            arr1.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.1'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.1){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.2'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.2){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.1'){
+                    arr3.length=0;
+                }
+                if(this.id==='3.3'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.3){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.4'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.1'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.1){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.2){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.4){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.3'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.1'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.3'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.1'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.1){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.2'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.2){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                renderRect();
+                renderLine();
+            });
+            lineLeft.addEventListener("click", function () {
+                if(this.id==='1.3'){
+                    for( var item in arr1){
+                        if(arr1[item].id===1.3){
+                            arr1.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.1'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.1){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='2.2'){
+                    for( var item in arr2){
+                        if(arr2[item].id===2.2){
+                            arr2.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.1'){
+                    arr3.length=0;
+                }
+                if(this.id==='3.3'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.3){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='3.4'){
+                    for( var item in arr3){
+                        if(arr3[item].id===3.4){
+                            arr3.splice(item,1)
+                        }
+                        if(arr3[item].id===3.5){
+                            arr3.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.1'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.1){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.2){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                        if(arr4[item].id===4.4){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='4.3'){
+                    for( var item in arr4){
+                        if(arr4[item].id===4.3){
+                            arr4.splice(item,1)
+                        }
+                    }
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.1'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.1){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.2){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='5.3'){
+                    for( var item in arr5){
+                        if(arr5[item].id===5.3){
+                            arr5.splice(item,1)
+                        }
+                        if(arr5[item].id===5.4){
+                            arr5.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.1'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.1){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                if(this.id==='6.2'){
+                    for( var item in arr6){
+                        if(arr6[item].id===6.2){
+                            arr6.splice(item,1)
+                        }
+                    }
+                }
+                renderRect();
+                renderLine();
+            });
+        }
+
+        document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
+        document.body.getElementsByTagName('svg')[0].appendChild(text);
+        document.body.getElementsByTagName('svg')[0].appendChild(circle);
+        document.body.getElementsByTagName('svg')[0].appendChild(lineLeft);
+        document.body.getElementsByTagName('svg')[0].appendChild(lineRight);
+    }
+    function createLine5(linesplit) {
+        var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+//        line.setAttribute('d', 'M2,2 L2,13 L8,7 L2,2');
+        linePath.setAttribute('marker-end',"url(#markerArrow)");
+        linePath.setAttribute('fill', 'none');
+        linePath.setAttribute('stroke', '#000000');
+        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4)+' '+(linesplit.x5 + ','+linesplit.y5));
+//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
+//        linePath.setAttribute('d', 'M 0 0 L 60 0');
+        var str = `<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>`;
+       //var str = `<!--<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>`+`<animateMotiondur = "3s"repeatCount ="indefinite"rotate = "auto"path = "M100 150 L200 50 L300 150 L400 50 Z" />`+`</path>-->`
+        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
+        document.body.getElementsByTagName('svg')[0].append(str);
+    }
+    function createLine4(linesplit) {
+        var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        linePath.setAttribute("marker-end","url(#markerArrow)");
+        linePath.setAttribute('fill', 'none');
+        linePath.setAttribute('stroke', '#000000');
+        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4));
+//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
+//        linePath.setAttribute('d', 'M 0 0 L 60 0');
+        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
+    }
+
+
+    function createNode2() {
+        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        var svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+
+        svgDom.setAttribute('width', '100');
+        svgDom.setAttribute('height', '100');
+        svgDom.setAttribute("x", '120');
+        svgDom.setAttribute("y", '120');
+
+        svgDom.setAttribute("fill", "#FB923F");//0表示未通过矩形的填充颜色为黄
+        text.setAttribute("x", '20');
+        text.setAttribute("y", '20');
+        text.setAttribute("text-anchor", "middle");
+        text.style.fontSize = "0.9em";
+        text.textContent = '神经病';
+        svgDom.addEventListener("click", function () {
+            console.log(this)
+        });
+        document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
+        document.body.getElementsByTagName('svg')[0].appendChild(text);
+    }
+    function prevSibling(node) {
+        var tempFirst = node.parentNode.firstChild;
+        if (node == tempFirst) return null;
+        var tempObj = node.previousSibling;
+        while (tempObj.nodeType != 1 && tempObj.previousSibling != null) {
+            tempObj = tempObj.previousSibling;
+        }
+        return (tempObj.nodeType==1)? tempObj:null;
+    }
+    function deepClone(obj) {
+        var newObj = obj instanceof Array ? [] : {};
+        if(typeof obj!='object'){
+            return obj
+        }else {
+            for(var i in obj) {
+                newObj[i] = typeof obj[i] === 'object' ? deepClone(obj[i]):obj[i];
+            }
+        }
+        return newObj
+    }
+</script>
