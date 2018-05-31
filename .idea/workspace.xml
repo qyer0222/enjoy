@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/svg/svgTest6.html" line="361" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e696ed79-7b18-4a09-94ff-f31cc4f2c805" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/svgTest5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg/svgTest6.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/padding.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svg/svgTest6.html" afterPath="$PROJECT_DIR$/svg/svgTest6.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +35,8 @@
       <file leaf-file-name="svgTest.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svg/svgTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="280">
+              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -43,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/svg/svgTest2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1720">
-              <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+              <caret line="86" column="17" lean-forward="false" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#rect#0;n#marker#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -54,8 +57,8 @@
       <file leaf-file-name="svgTest3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svg/svgTest3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+            <state relative-caret-position="1540">
+              <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#path#0;n#marker#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -66,8 +69,8 @@
       <file leaf-file-name="svgTest4.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svg/svgTest4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="20" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1124" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#path#0;n#marker#0;n#svg#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -78,11 +81,19 @@
       <file leaf-file-name="svgTest6.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svg/svgTest6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="1065" column="114" lean-forward="true" selection-start-line="1065" selection-start-column="114" selection-end-line="1065" selection-end-column="114" />
-              <folding>
-                <marker date="1527155840932" expanded="true" signature="32331:32345" ph="..." />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="padding.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/padding.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/svg/svgTest5.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/ES5/deepClone.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -112,16 +123,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
               <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="defineprotype.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/defineprotype.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -140,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{</find>
       <find>tool</find>
       <find>arrow</find>
       <find>getSvgMarker</find>
@@ -160,7 +160,24 @@
       <find>d</find>
       <find>polyline</find>
       <find>renderRect</find>
+      <find>id</find>
+      <find>linesplit</find>
+      <find>7</find>
+      <find>4_5</find>
+      <find>y_line</find>
+      <find>font</find>
+      <find>data</find>
+      <find>createNode</find>
+      <find>prevSibling</find>
+      <find>fill</find>
+      <find>remarks</find>
     </findStrings>
+    <replaceStrings>
+      <replace>13</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\Code\个人杂\git\enjoy\svg</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,6 +198,7 @@
         <option value="$PROJECT_DIR$/svg/svgTest3.html" />
         <option value="$PROJECT_DIR$/svg/svgTest5.html" />
         <option value="$PROJECT_DIR$/svg/svgTest4.html" />
+        <option value="$PROJECT_DIR$/css/padding.html" />
         <option value="$PROJECT_DIR$/svg/svgTest6.html" />
       </list>
     </option>
@@ -192,10 +210,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1932" />
-    <option name="height" value="1045" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -212,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,20 +295,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ES5" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../移动应用监管平台/（山东项目）外包/appmonitor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../安控项目" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="D:/node/node" />
@@ -313,9 +331,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.svgTest6.html">
-    <configuration default="false" name="svgTest.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/svg/svgTest.html">
-      <method />
-    </configuration>
     <configuration default="false" name="svgTest3.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/svg/svgTest3.html">
       <method />
     </configuration>
@@ -326,6 +341,9 @@
       <method />
     </configuration>
     <configuration default="false" name="svgTest6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/svg/svgTest6.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="padding.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/enjoy/css/padding.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -395,19 +413,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.svgTest.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.svgTest3.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.svgTest4.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.svgTest5.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.svgTest6.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.svgTest3.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.svgTest4.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.svgTest5.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.svgTest6.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.padding.html" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.svgTest6.html" />
         <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.svgTest4.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.svgTest5.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.svgTest3.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.svgTest.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.padding.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.svgTest5.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.svgTest3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -425,17 +443,18 @@
       <workItem from="1525848368377" duration="584000" />
       <workItem from="1525935032481" duration="599000" />
       <workItem from="1526286684320" duration="45240000" />
+      <workItem from="1527299594555" duration="39039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101337000" />
+    <option name="totallyTimeSpent" value="140376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16816977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16781366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -444,24 +463,16 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16816977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,14 +486,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ES5/deepClone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ES6/promise.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -789,7 +792,7 @@
     <entry file="file://$PROJECT_DIR$/ES5/deepClone.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -805,8 +808,8 @@
     <entry file="file://$PROJECT_DIR$/svg/svgTest3.css" />
     <entry file="file://$PROJECT_DIR$/svg/svgTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="280">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -814,7 +817,7 @@
     <entry file="file://$PROJECT_DIR$/svg/svgTest2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1720">
-          <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
+          <caret line="86" column="17" lean-forward="false" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#rect#0;n#marker#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -823,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svg/svgTest3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
+        <state relative-caret-position="1540">
+          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="85" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#path#0;n#marker#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -834,28 +837,34 @@
     <entry file="file://$PROJECT_DIR$/svg/svgTest5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/svg/svgTest4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1124" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#path#0;n#marker#0;n#svg#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/padding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/svg/svgTest6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="1065" column="114" lean-forward="true" selection-start-line="1065" selection-start-column="114" selection-end-line="1065" selection-end-column="114" />
-          <folding>
-            <marker date="1527155840932" expanded="true" signature="32331:32345" ph="..." />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -4,226 +4,229 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        svg{
-            width: 1500px;
-            height:1500px;
+        body{
+            padding-top: 20%;
+            background: linear-gradient(#406fc9, #88a3de);
+            height: 800px;
+            overflow: hidden;
+            padding-left: 50px;
+        }
+        #svgDemo{
+            width: 1300px;
+            height:500px;
             font-family:Verdana,Times New Roman;
         }
         #markerArrow{
-            stroke-dasharray: 100; stroke-dashoffset: 0; animation: dash 2s linear infinite;
+            stroke-dasharray: 100; stroke-dashoffset: 0; animation: dash 3s linear infinite;
         }
-        polyline { stroke-dasharray: 2000; stroke-dashoffset: 0; animation: dash 2s linear; }
+        /*polyline { stroke-dasharray: 2000; stroke-dashoffset: 0; animation: dash 2s linear; }*/
         @keyframes dash { from { stroke-dashoffset: 2000; } to { stroke-dashoffset: 0; } }
     </style>
 
 </head>
 <body>
-<h1>备注：实际界面删除按钮和箭头是不能同时出现的，这个地方的交叉覆盖是合理的，后期会分开，数据样式等没有对接，只作为demo展示查看功能实现效果</h1>
-<svg >
+<!--<h1>备注：实际界面删除按钮和箭头是不能同时出现的，这个地方的交叉覆盖是合理的，后期会分开，数据样式等没有对接，只作为demo展示查看功能实现效果</h1>-->
+<svg id="svgDemo">
 
 </svg>
 <svg>
-    <!--<marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="7"-->
-            <!--orient="auto">-->
-        <!--<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>-->
-    <!--</marker>-->
+    <defs>
+        <linearGradient id="greenGradient"  x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0" stop-color="#bcddfe" />
+            <stop offset="100%" stop-color="#7acafe" />
+        </linearGradient>
+    </defs>
 </svg>
 </body>
 </html>
 <script>
-    //    var x = 100;
-    //    var y = 100;
-    //    var height = 30;
-    //    var width = 100;
-    //    var data = {
-    //        x:100,
-    //        y:100,
-    //        height:30,
-    //        width:100,
-    //        id:1.1,
-    //        name:'配置安全基线内容'
-    //    }
     var defs=document.createElementNS("http://www.w3.org/2000/svg","defs");
-    //    defs.appendChild(getSvgMarker("arrow","#7D7D7D"));//正常颜色
     document.body.getElementsByTagName('svg')[0].appendChild(defs);
+    var normalFontSize = '12px'
+    var remarks = 3.1
+    var Width = 153;
+    var Height  = 26;
+    var chenlei_split = 20;
+    var y_line = 42;
+    var x_line = 219;
     var arr1 = [{
         x:0,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:1.1,
-        name:'1.1配置安全基线内容',
+        name:'配置安全基线内容',
         status:false
     },{
         x:0,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:1.2,
-        name:'1.2配置安全管控流程',
+        name:'配置安全管控流程',
         status:false
     },{
         x:0,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:1.3,
-        name:'1.3安全需求立项确认',
+        name:'安全需求立项确认',
         status:true
     }];
 
     var arr2 = [{
-        x:200,
+        x:x_line,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:2.1,
-        name:'2.1发布安全设计文档',
+        name:'发布安全设计文档',
         status:true
     },{
-        x:200,
+        x:x_line,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:2.2,
-        name:'2.2安全设计培训',
+        name:'安全设计培训',
         status:true
     }];
 
     var arr3 = [{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.1,
-        name:'3.1代码提交',
+        name:'代码提交',
         status:true
     },{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.2,
-        name:'3.2自动化基线扫描',
+        name:'自动化基线扫描',
         status:false
     },{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.3,
-        name:'3.3代码安全确认',
+        name:'代码安全确认',
         status:true
     },{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.4,
-        name:'3.4代码问题整改',
+        name:'代码问题整改',
         status:true
     },{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.5,
-        name:'3.5代码整改确认',
+        name:'代码整改确认',
         status:false
     },{
-        x:400,
+        x:x_line*2,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:3.6,
-        name:'3.6编码完成确认',
+        name:'编码完成确认',
         status:false
     }];
 
 
     var arr4 = [{
-        x:600,
+        x:x_line*3,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:4.1,
-        name:'4.1提交基线检测',
+        name:'提交基线检测',
         status:true
     },{
-        x:600,
+        x:x_line*3,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:4.2,
-        name:'4.2自动化基线扫描',
+        name:'自动化基线扫描',
         status:false
     },{
-        x:600,
+        x:x_line*3,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:4.3,
-        name:'4.3人工基线检测',
+        name:'人工基线检测',
         status:true
     },{
-        x:600,
+        x:x_line*3,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:4.4,
-        name:'4.4基线安全确认',
+        name:'基线安全确认',
         status:false
     }];
 
     var arr5 = [{
-        x:800,
+        x:x_line*4,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:5.1,
-        name:'5.1人工基线检测问题整改',
+        name:'人工基线检测问题整改',
         status:true
     },{
-        x:800,
+        x:x_line*4,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:5.2,
-        name:'5.2人工基线检测整改确认',
+        name:'人工基线检测整改确认',
         status:false
     },{
-        x:800,
+        x:x_line*4,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:5.3,
-        name:'5.3自动化基线扫描问题整改',
+        name:'自动化基线扫描问题整改',
         status:true
     },{
-        x:800,
+        x:x_line*4,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:5.4,
-        name:'5.4自动化基线扫描整改确认',
+        name:'自动化基线扫描整改确认',
         status:false
     }];
 
     var arr6 = [{
-        x:1000,
+        x:x_line*5,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:6.1,
-        name:'6.1应用官方签名',
+        name:'应用官方签名',
         status:true
     },{
-        x:1000,
+        x:x_line*5,
         y:0,
-        height:30,
-        width:100,
+        height:Height,
+        width:Width,
         id:6.2,
-        name:'6.2发布',
+        name:'发布',
         status:true
     }];
 
@@ -232,40 +235,41 @@
         //画第一栏
         var arr1Copy = deepClone(arr1)
         for(var i=0;i<arr1Copy.length;i++){
-            arr1Copy[i].y += 100*i;
+            arr1Copy[i].y += y_line*i;
             createNode(arr1Copy[i])
         }
         //画第二栏
         var arr2Copy = deepClone(arr2)
         for(var i=0;i<arr2Copy.length;i++){
-            arr2Copy[i].y += 100*i;
+            arr2Copy[i].y += y_line*i;
             createNode(arr2Copy[i])
         }
         //画第三栏
         var arr3Copy = deepClone(arr3)
         for(var i=0;i<arr3Copy.length;i++){
-            arr3Copy[i].y += 100*i;
+            arr3Copy[i].y += y_line*i;
             createNode(arr3Copy[i])
         }
         //画第四栏
         var arr4Copy = deepClone(arr4)
         for(var i=0;i<arr4Copy.length;i++){
-            arr4Copy[i].y += 100*i;
+            arr4Copy[i].y += y_line*i;
             createNode(arr4Copy[i])
         }
         //画第五栏
         var arr5Copy = deepClone(arr5)
         for(var i=0;i<arr5Copy.length;i++){
-            arr5Copy[i].y += 100*i;
+            arr5Copy[i].y += y_line*i;
             createNode(arr5Copy[i])
         }
         //画第六栏
         var arr6Copy = deepClone(arr6)
         for(var i=0;i<arr6Copy.length;i++){
-            arr6Copy[i].y += 100*i;
+            arr6Copy[i].y += y_line*i;
             createNode(arr6Copy[i])
         }
     }
+
     renderRect();
     renderLine();
     function renderLine(){
@@ -274,207 +278,225 @@
         var line3 = arr3.length;
         var line4 = arr4.length;
         var line5 = arr5.length;
+        //1.3-1.1的线条
         var linesplit2 = {
-            x1:100,
-            y1:(line1-1)*100+20,
-            x2:120,
-            y2:(line1-1)*100+20,
-            x3:120,
-            y3:10,
-            x4:100+7,
-            y4:10
+            x1:Width,
+            y1:(line1-1)*y_line+Height/2,
+            x2:Width+chenlei_split,
+            y2:(line1-1)*y_line+Height/2,
+            x3:Width+chenlei_split,
+            y3:Height/2,
+            x4:Width,
+            y4:Height/2
         }
+        //3.6-3.1
         var linesplit3_1= {
-            x1:50+400+50,
-            y1:30+(line3-1)*100-15,
-            x2:50+400+50+20,
-            y2:30+(line3-1)*100-15,
-            x3:50+400+50+20,
-            y3:15,
-            x4:50+400+50+20+7-20,
-            y4:15
+            x1:Width+x_line*2,
+            y1:Height/2+(line3-1)*y_line,
+            x2:Width+x_line*2+chenlei_split,
+            y2:Height/2+(line3-1)*y_line,
+            x3:Width+x_line*2+chenlei_split,
+            y3:Height/2,
+            x4:Width+x_line*2,
+            y4:Height/2
         }
+        //3.5-3.4
         var linesplit3_2= {
-            x1:50+400+50-100,
-            y1:(line3-2)*100+15,
-            x2:50+400+50-100-15,
-            y2:(line3-2)*100+15,
-            x3:50+400+50-100-15,
-            y3:(line3-3)*100+15,
-            x4:50+400+50-100-7,
-            y4:(line3-3)*100+15
+            x1:x_line*2,
+            y1:(line3-2)*y_line+Height/2,
+            x2:x_line*2-chenlei_split,
+            y2:(line3-2)*y_line+Height/2,
+            x3:x_line*2-chenlei_split,
+            y3:(line3-3)*y_line+Height/2,
+            x4:x_line*2,
+            y4:(line3-3)*y_line+Height/2
         }
+        //3.3-3.6
         var linesplit3_3= {
-            x1:50+400+50-100,
-            y1:2*100+15,
-            x2:50+400+50-100-30,
-            y2:2*100+15,
-            x3:50+400+50-100-30,
-            y3:(line3-1)*100+15,
-            x4:50+400+50-100-7,
-            y4:(line3-1)*100+15
+            x1:x_line*2,
+            y1:y_line*2+Height/2,
+            x2:x_line*2-chenlei_split*2,
+            y2:y_line*2+Height/2,
+            x3:x_line*2-chenlei_split*2,
+            y3:(line3-1)*y_line+Height/2,
+            x4:x_line*2,
+            y4:(line3-1)*y_line+Height/2
         }
+        //线条5.2-5.1
         var linesplit5_1= {
-            x1:50+800+50,
-            y1:100+15,
-            x2:50+800+50+30,
-            y2:100+15,
-            x3:50+800+50+30,
-            y3:15,
-            x4:50+800+50+7,
-            y4:15
+            x1:x_line*4+Width,
+            y1:y_line+Height/2,
+            x2:x_line*4+Width+chenlei_split,
+            y2:y_line+Height/2,
+            x3:x_line*4+Width+chenlei_split,
+            y3:Height/2,
+            x4:x_line*4+Width,
+            y4:Height/2
         }
+        //线条5.4-5.3
         var linesplit5_2= {
-            x1:50+800+50,
-            y1:(line5-1)*100+15,
-            x2:50+800+50+30,
-            y2:(line5-1)*100+15,
-            x3:50+800+50+30,
-            y3:(line5-2)*100+15,
-            x4:50+800+50+7,
-            y4:(line5-2)*100+15
+            x1:x_line*4+Width,
+            y1:(line5-1)*y_line+Height/2,
+            x2:x_line*4+Width+chenlei_split,
+            y2:(line5-1)*y_line+Height/2,
+            x3:x_line*4+Width+chenlei_split,
+            y3:(line5-2)*y_line+Height/2,
+            x4:x_line*4+Width,
+            y4:(line5-2)*y_line+Height/2
         }
+        //流程1的尾部线条
         var endsplit1 = {
-            x1:50,
-            y1:30+(line1-1)*100,
-            x2:50,
-            y2:20+30+(line1-1)*100,
-            x3:50+100,
-            y3:50+(line1-1)*100,
-            x4:50+100,
-            y4:15,
-            x5:200-7,
-            y5:15
+            x1:Width/2,
+            y1:Height+(line1-1)*y_line-2+2,
+            x2:Width/2,
+            y2:Height+chenlei_split+(line1-1)*y_line-2,
+            x3:x_line-chenlei_split,
+            y3:Height+chenlei_split+(line1-1)*y_line-2,
+            x4:x_line-chenlei_split,
+            y4:Height/2,
+            x5:x_line,
+            y5:Height/2
         }
+        //流程2的尾部线条
         var endsplit2 = {
-            x1:50+200,
-            y1:30+(line2-1)*100,
-            x2:50+200,
-            y2:20+30+(line2-1)*100,
-            x3:50+100+200,
-            y3:50+(line2-1)*100,
-            x4:50+100+200,
-            y4:15,
-            x5:200-7+200,
-            y5:15
+            x1:x_line+Width/2,
+            y1:Height+2+(line2-1)*y_line-2,
+            x2:x_line+Width/2,
+            y2:Height+chenlei_split+(line2-1)*y_line-2,
+            x3:x_line*2-chenlei_split,
+            y3:Height+chenlei_split+(line2-1)*y_line-2,
+            x4:x_line*2-chenlei_split,
+            y4:Height/2,
+            x5:x_line*2,
+            y5:Height/2
         }
+        //流程3的尾部线条
         var endsplit3 = {
-            x1:50+400,
-            y1:30+(line3-1)*100,
-            x2:50+400,
-            y2:20+30+(line3-1)*100,
-            x3:50+100+400,
-            y3:50+(line3-1)*100,
-            x4:50+100+400,
-            y4:15,
-            x5:200-7+400,
-            y5:15
+            x1:x_line*2+Width/2,
+            y1:Height+(line3-1)*y_line,
+            x2:x_line*2+Width/2,
+            y2:Height+chenlei_split+(line3-1)*y_line-2,
+            x3:x_line*3-chenlei_split,
+            y3:Height+chenlei_split+(line3-1)*y_line-2,
+            x4:x_line*3-chenlei_split,
+            y4:Height/2,
+            x5:x_line*3,
+            y5:Height/2
         }
+        //流程4的尾部线条
         var endsplit4 = {
-            x1:50+600+50,
-            y1:(line4-1)*100+15,
-            x2:50+600+100,
-            y2:(line4-1)*100+15,
-            x3:50+100+600,
-            y3:15,
-            x4:100+600+7+50+50-14,
-            y4:15
+            x1:x_line*3+Width,
+            y1:(line4-1)*y_line+Height/2,
+            x2:x_line*4-chenlei_split,
+            y2:(line4-1)*y_line+Height/2,
+            x3:x_line*4-chenlei_split,
+            y3:Height/2,
+            x4:x_line*4,
+            y4:Height/2
         }
+        //流程1-3的尾部线条
         var endsplit1_3 = {
-            x1:50,
-            y1:30+(line1-1)*100,
-            x2:50,
-            y2:20+30+(line1-1)*100,
-            x3:50+100,
-            y3:50+(line1-1)*100,
-            x4:50+100,
-            y4:15,
-            x5:200-7+200,
-            y5:15
+            x1:Width/2,
+            y1:Height+(line1-1)*y_line,
+            x2:Width/2,
+            y2:chenlei_split+Height+(line1-1)*y_line,
+            x3:x_line*2-chenlei_split*3,
+            y3:Height+(line1-1)*y_line+chenlei_split,
+            x4:x_line*2-chenlei_split*3,
+            y4:Height/2,
+            x5:x_line*2,
+            y5:Height/2
         }
+        //流程1-4的尾部线条
         var endsplit1_4 = {
-            x1:50,
-            y1:30+(line1-1)*100,
-            x2:50,
-            y2:20+30+(line1-1)*100,
-            x3:50+100,
-            y3:50+(line1-1)*100,
-            x4:50+100,
-            y4:15,
-            x5:200-7+200+200,
-            y5:15
+            x1:Width/2,
+            y1:Height+(line1-1)*y_line,
+            x2:Width/2,
+            y2:chenlei_split+Height+(line1-1)*y_line,
+            x3:x_line*2-chenlei_split*3,
+            y3:Height+(line1-1)*y_line+chenlei_split,
+            x4:x_line*2-chenlei_split*3,
+            y4:Height/2,
+            x5:x_line*3,
+            y5:Height/2
         }
+        //流程1-6的尾部线条
         var endsplit1_6 = {
-            x1:50,
-            y1:30+(line1-1)*100,
-            x2:50,
-            y2:20+30+(line1-1)*100,
-            x3:50+100,
-            y3:50+(line1-1)*100,
-            x4:50+100,
-            y4:15,
-            x5:200-7+600+200,
-            y5:15
+            x1:Width/2,
+            y1:Height+(line1-1)*y_line,
+            x2:Width/2,
+            y2:chenlei_split+Height+(line1-1)*y_line,
+            x3:x_line*2-chenlei_split*3,
+            y3:Height+(line1-1)*y_line+chenlei_split,
+            x4:x_line*2-chenlei_split*3,
+            y4:Height/2,
+            x5:x_line*5,
+            y5:Height/2
         }
+        //流程2-4的尾部线条
         var endsplit2_4 = {
-            x1:50+200,
-            y1:30+(line2-1)*100,
-            x2:50+200,
-            y2:20+30+(line2-1)*100,
-            x3:50+100+200,
-            y3:50+(line2-1)*100,
-            x4:50+100+200,
-            y4:15,
-            x5:200-7+200+200,
-            y5:15
+            x1:Width/2+x_line,
+            y1:Height+(line2-1)*y_line,
+            x2:Width/2+x_line,
+            y2:chenlei_split+Height+(line2-1)*y_line,
+            x3:x_line*2+chenlei_split*4,
+            y3:Height+(line2-1)*y_line+chenlei_split,
+            x4:x_line*2+chenlei_split*4,
+            y4:Height/2,
+            x5:x_line*3,
+            y5:Height/2
         }
+        // 线条4.4-6.1
         var endsplit4_6 = {
-            x1:50+600,
-            y1:30+(line4-1)*100,
-            x2:50+600,
-            y2:20+30+(line4-1)*100,
-            x3:50+100+600+200,
-            y3:50+(line4-1)*100,
-            x4:50+100+600+200,
-            y4:15,
-            x5:200-7+600+200,
-            y5:15
+            x1:x_line*3+Width/2,
+            y1:Height+(line4-1)*y_line,
+            x2:x_line*3+Width/2,
+            y2:Height+chenlei_split+(line4-1)*y_line,
+            x3:x_line*5-chenlei_split,
+            y3:Height+chenlei_split+(line4-1)*y_line,
+            x4:x_line*5-chenlei_split,
+            y4:Height/2,
+            x5:x_line*5,
+            y5:Height/2
         }
+        // 线条5.4-4.1
         var endsplit5_4 = {
-            x1:50+600+200,
-            y1:30+(line5-1)*100,
-            x2:50+600+200,
-            y2:20+30+(line5-1)*100-10,
-            x3:50+100+600-20,
-            y3:50+(line5-1)*100-10,
-            x4:50+100+600-20,
-            y4:15,
-            x5:100+600+7,
-            y5:15
+            x1:x_line*4+Width/2,
+            y1:(line5-1)*y_line+Height,
+            x2:x_line*4+Width/2,
+            y2:(line5-1)*y_line+Height+chenlei_split/2,
+            x3:x_line*3+chenlei_split+Width,
+            y3:(line5-1)*y_line+Height+chenlei_split/2,
+            x4:x_line*3+chenlei_split+Width,
+            y4:Height/2,
+            x5:x_line*3+Width,
+            y5:Height/2
         }
+        //流程2-6的尾部线条
         var endsplit2_6 = {
-            x1:50+200,
-            y1:30+(line2-1)*100,
-            x2:50+200,
-            y2:20+30+(line2-1)*100,
-            x3:50+100+200,
-            y3:50+(line2-1)*100,
-            x4:50+100+200,
-            y4:15,
-            x5:200-7+600+200,
-            y5:15
+            x1:Width/2+x_line,
+            y1:Height+(line2-1)*y_line,
+            x2:Width/2+x_line,
+            y2:chenlei_split+Height+(line2-1)*y_line,
+            x3:x_line*2+chenlei_split*4,
+            y3:Height+(line2-1)*y_line+chenlei_split,
+            x4:x_line*2+chenlei_split*4,
+            y4:Height/2,
+            x5:x_line*5,
+            y5:Height/2
         }
+        //流程3-6的尾部线条
         var endsplit3_6 = {
-            x1:50+400,
-            y1:30+(line3-1)*100,
-            x2:50+400,
-            y2:20+30+(line3-1)*100,
-            x3:50+400+200,
-            y3:20+30+(line3-1)*100,
-            x4:50+400+200,
-            y4:15,
-            x5:200-7+600+200,
-            y5:15
+            x1:Width/2+x_line*2,
+            y1:Height+(line3-1)*y_line,
+            x2:Width/2+x_line*2,
+            y2:chenlei_split+Height+(line3-1)*y_line,
+            x3:x_line*3+chenlei_split*4,
+            y3:Height+(line3-1)*y_line+chenlei_split,
+            x4:x_line*3+chenlei_split*4,
+            y4:Height/2,
+            x5:x_line*5,
+            y5:Height/2
         }
         if(arr1.length!=0){
             if(arr1.length>=3){
@@ -597,18 +619,36 @@
         var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         var lineLeft = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         var lineRight = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        //svgDom渲染正方形
         svgDom.setAttribute('width', data.width);
         svgDom.setAttribute('height', data.height);
         svgDom.setAttribute("x", data.x);
         svgDom.setAttribute("y", data.y);
-        svgDom.setAttribute("stroke", 'black');
-        svgDom.setAttribute("fill", "#fff");//0表示未通过矩形的填充颜色为黄
+        svgDom.setAttribute("rx", 4);
+        svgDom.setAttribute("ry", 4);
+        svgDom.setAttribute("stroke", 'none');
         svgDom.id = data.id;
+//        svgDom.setAttribute("boreder-radious", '10');
+        if(svgDom.id<remarks){
+            svgDom.setAttribute("fill", "url(#greenGradient)");//0表示未通过矩形的填充颜色为黄
+            text.setAttribute("fill", "#46207b");
+        }
+        if(svgDom.id==remarks){
+            svgDom.setAttribute("fill", "#f4fbfb");//0表示未通过矩形的填充颜色为黄
+            text.setAttribute("fill", "#3f4348");
+            svgDom.setAttribute("stroke", '#fff');
+        }
+        if(svgDom.id>remarks){
+            svgDom.setAttribute("fill", "none");//0表示未通过矩形的填充颜色为黄
+            text.setAttribute("fill", "#fff");
+            svgDom.setAttribute("stroke", '#fff');
+        }
+        //text为文字部分
+        text.setAttribute("x", data.x + 10);
+        text.setAttribute("y", data.y + 20);
 
-        text.setAttribute("x", data.x);
-        text.setAttribute("y", data.y+20);
-        text.setAttribute("fill", "#FB923F");
-        text.style.fontSize = "8px";
+        text.setAttribute("font-weight", 'bold');
+        text.style.fontSize = normalFontSize;
         text.textContent = data.name;
         // 正方形增加鼠标移入效果
         svgDom.addEventListener("mousemove", function () {
@@ -618,18 +658,18 @@
         text.addEventListener("mousemove", function () {
             this.style.cursor = 'pointer'
         })
-        if(data.status){
-            circle.setAttribute("cx",data.x+106);
-            circle.setAttribute("cy",data.y+15);
-            circle.setAttribute("r","6");
+        if (data.status) {
+            circle.setAttribute("cx", data.x + Width + 6);
+            circle.setAttribute("cy", data.y + Height / 2);
+            circle.setAttribute("r", "6");
             circle.setAttribute("fill", "#fff");
-            circle.setAttribute("stroke", 'black');
-            lineLeft.setAttribute("d","M"+' '+ ((data.x+103) + ' '+(data.y+17)) +' '+"L"+' '+((data.x+109)+' '+(data.y+13)));
-            lineRight.setAttribute("d","M"+' '+ ((data.x+103) + ' '+(data.y+13)) +' '+"L"+' '+((data.x+109)+' '+(data.y+17)));
+            circle.setAttribute("stroke", '#9bd3fe');
+            lineLeft.setAttribute("d", "M" + ' ' + ((data.x + Width) + ' ' + (data.y + Height / 2 - 3)) + ' ' + "L" + ' ' + ((data.x + Width + 6 * 2) + ' ' + (data.y + Height / 2 + 4)));
+            lineRight.setAttribute("d", "M" + ' ' + ((data.x + Width + 6 * 2) + ' ' + (data.y + Height / 2 - 3)) + ' ' + "L" + ' ' + ((data.x + Width) + ' ' + (data.y + Height / 2 + 4)));
             lineLeft.setAttribute('fill', 'none');
-            lineLeft.setAttribute('stroke', 'black');
+            lineLeft.setAttribute('stroke', '#9bd3fe');
             lineRight.setAttribute('fill', 'none');
-            lineRight.setAttribute('stroke', 'black');
+            lineRight.setAttribute('stroke', '#9bd3fe');
             circle.id = data.id;
             lineLeft.id = data.id;
             lineRight.id = data.id;
@@ -645,129 +685,129 @@
             })
             //圆环点击之后删除相应的id
             circle.addEventListener("click", function () {
-                if(this.id==='1.3'){
-                    for( var item in arr1){
-                        if(arr1[item].id===1.3){
-                            arr1.splice(item,1)
+                if (this.id == '1.3') {
+                    for (var item in arr1) {
+                        if (arr1[item].id == 1.3) {
+                            arr1.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.1'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.1){
-                            arr2.splice(item,1)
+                if (this.id == '2.1') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.1) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.2'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.2){
-                            arr2.splice(item,1)
+                if (this.id == '2.2') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.2) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='3.1'){
-                    arr3.length=0;
+                if (this.id == '3.1') {
+                    arr3.length = 0;
                 }
-                if(this.id==='3.3'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.3){
-                            arr3.splice(item,1)
+                if (this.id == '3.3') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.3) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='3.4'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
-                        }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.1'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.1){
-                            arr4.splice(item,1)
+                if (this.id == '3.4') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr4[item].id===4.2){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.4){
-                            arr4.splice(item,1)
-                        }
-                    }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.3'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
+                if (this.id == '4.1') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.1) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.2) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.4) {
+                            arr4.splice(item, 1)
                         }
                     }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
-                    }
-                }
-                if(this.id==='5.1'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='5.3'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.1'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.1){
-                            arr6.splice(item,1)
+                if (this.id == '4.3') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                    }
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.2'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.2){
-                            arr6.splice(item,1)
+                if (this.id == '5.1') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '5.3') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.1') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.1) {
+                            arr6.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.2') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.2) {
+                            arr6.splice(item, 1)
                         }
                     }
                 }
@@ -775,129 +815,129 @@
                 renderLine();
             });
             lineRight.addEventListener("click", function () {
-                if(this.id==='1.3'){
-                    for( var item in arr1){
-                        if(arr1[item].id===1.3){
-                            arr1.splice(item,1)
+                if (this.id == '1.3') {
+                    for (var item in arr1) {
+                        if (arr1[item].id == 1.3) {
+                            arr1.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.1'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.1){
-                            arr2.splice(item,1)
+                if (this.id == '2.1') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.1) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.2'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.2){
-                            arr2.splice(item,1)
+                if (this.id == '2.2') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.2) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='3.1'){
-                    arr3.length=0;
+                if (this.id == '3.1') {
+                    arr3.length = 0;
                 }
-                if(this.id==='3.3'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.3){
-                            arr3.splice(item,1)
+                if (this.id == '3.3') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.3) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='3.4'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
-                        }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.1'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.1){
-                            arr4.splice(item,1)
+                if (this.id == '3.4') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr4[item].id===4.2){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.4){
-                            arr4.splice(item,1)
-                        }
-                    }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.3'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
+                if (this.id == '4.1') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.1) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.2) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.4) {
+                            arr4.splice(item, 1)
                         }
                     }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
-                    }
-                }
-                if(this.id==='5.1'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='5.3'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.1'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.1){
-                            arr6.splice(item,1)
+                if (this.id == '4.3') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                    }
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.2'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.2){
-                            arr6.splice(item,1)
+                if (this.id == '5.1') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '5.3') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.1') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.1) {
+                            arr6.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.2') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.2) {
+                            arr6.splice(item, 1)
                         }
                     }
                 }
@@ -905,129 +945,129 @@
                 renderLine();
             });
             lineLeft.addEventListener("click", function () {
-                if(this.id==='1.3'){
-                    for( var item in arr1){
-                        if(arr1[item].id===1.3){
-                            arr1.splice(item,1)
+                if (this.id == '1.3') {
+                    for (var item in arr1) {
+                        if (arr1[item].id == 1.3) {
+                            arr1.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.1'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.1){
-                            arr2.splice(item,1)
+                if (this.id == '2.1') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.1) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='2.2'){
-                    for( var item in arr2){
-                        if(arr2[item].id===2.2){
-                            arr2.splice(item,1)
+                if (this.id == '2.2') {
+                    for (var item in arr2) {
+                        if (arr2[item].id == 2.2) {
+                            arr2.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='3.1'){
-                    arr3.length=0;
+                if (this.id == '3.1') {
+                    arr3.length = 0;
                 }
-                if(this.id==='3.3'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.3){
-                            arr3.splice(item,1)
+                if (this.id == '3.3') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.3) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='3.4'){
-                    for( var item in arr3){
-                        if(arr3[item].id===3.4){
-                            arr3.splice(item,1)
-                        }
-                        if(arr3[item].id===3.5){
-                            arr3.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.1'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.1){
-                            arr4.splice(item,1)
+                if (this.id == '3.4') {
+                    for (var item in arr3) {
+                        if (arr3[item].id == 3.4) {
+                            arr3.splice(item, 1)
                         }
-                        if(arr4[item].id===4.2){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
-                        }
-                        if(arr4[item].id===4.4){
-                            arr4.splice(item,1)
-                        }
-                    }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr3[item].id == 3.5) {
+                            arr3.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='4.3'){
-                    for( var item in arr4){
-                        if(arr4[item].id===4.3){
-                            arr4.splice(item,1)
+                if (this.id == '4.1') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.1) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.2) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                        if (arr4[item].id == 4.4) {
+                            arr4.splice(item, 1)
                         }
                     }
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
-                    }
-                }
-                if(this.id==='5.1'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.1){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
                         }
-                        if(arr5[item].id===5.2){
-                            arr5.splice(item,1)
-                        }
-                    }
-                }
-                if(this.id==='5.3'){
-                    for( var item in arr5){
-                        if(arr5[item].id===5.3){
-                            arr5.splice(item,1)
-                        }
-                        if(arr5[item].id===5.4){
-                            arr5.splice(item,1)
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.1'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.1){
-                            arr6.splice(item,1)
+                if (this.id == '4.3') {
+                    for (var item in arr4) {
+                        if (arr4[item].id == 4.3) {
+                            arr4.splice(item, 1)
+                        }
+                    }
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
                         }
                     }
                 }
-                if(this.id==='6.2'){
-                    for( var item in arr6){
-                        if(arr6[item].id===6.2){
-                            arr6.splice(item,1)
+                if (this.id == '5.1') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.1) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.2) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '5.3') {
+                    for (var item in arr5) {
+                        if (arr5[item].id == 5.3) {
+                            arr5.splice(item, 1)
+                        }
+                        if (arr5[item].id == 5.4) {
+                            arr5.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.1') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.1) {
+                            arr6.splice(item, 1)
+                        }
+                    }
+                }
+                if (this.id == '6.2') {
+                    for (var item in arr6) {
+                        if (arr6[item].id == 6.2) {
+                            arr6.splice(item, 1)
                         }
                     }
                 }
@@ -1035,70 +1075,140 @@
                 renderLine();
             });
         }
-
         document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
         document.body.getElementsByTagName('svg')[0].appendChild(text);
-        document.body.getElementsByTagName('svg')[0].appendChild(circle);
-        document.body.getElementsByTagName('svg')[0].appendChild(lineLeft);
-        document.body.getElementsByTagName('svg')[0].appendChild(lineRight);
+        // document.body.getElementsByTagName('svg')[0].appendChild(circle);
+        // document.body.getElementsByTagName('svg')[0].appendChild(lineLeft);
+        // document.body.getElementsByTagName('svg')[0].appendChild(lineRight);
     }
     function createLine5(linesplit) {
         var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
         var line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-//        line.setAttribute('d', 'M2,2 L2,13 L8,7 L2,2');
+        var animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
         linePath.setAttribute('marker-end',"url(#markerArrow)");
         linePath.setAttribute('fill', 'none');
-        linePath.setAttribute('stroke', '#000000');
+        linePath.setAttribute('stroke', '#fff');
+        var x1,x2,x3,x4,x5,y1,y2,y3,y4,y5
+        if(linesplit.y1<linesplit.y2){
+            y1 = linesplit.y1+8;
+        }else {
+            y1 = linesplit.y1;
+        }
+        if(linesplit.y2<linesplit.y3){
+            y2 = linesplit.y2;
+        }else {
+            if(linesplit.x2<linesplit.x3){
+                y2 = linesplit.y2-8;
+            }else {
+                y2 = linesplit.y2+8;
+            }
+        }
+        if(linesplit.y3<linesplit.y4){
+            y3 = linesplit.y3;
+        }else {
+            if(linesplit.x2<linesplit.x3){
+                y3 = linesplit.y3-8;
+            }else {
+                y3 = linesplit.y3+8;
+            }
+        }
+        if(linesplit.y4<linesplit.y5){
+            y4 = linesplit.y4;
+            y5 = linesplit.y5;
+        }else {
+            y4 = linesplit.y4-8;
+            y5 = linesplit.y5-8;
+            if(linesplit.x4<linesplit.x5){
+                y4 = linesplit.y4-8;
+                y5 = linesplit.y5-8;
+            }else {
+                y4 = linesplit.y4+8;
+                y5 = linesplit.y5+8;
+            }
+        }
+        x4 = linesplit.x4-8
+        x5 = linesplit.x5
+        if(x4<x5){
+            x5 = linesplit.x5-8
+        }else {
+            x5 = linesplit.x5+8
+        }
         linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4)+' '+(linesplit.x5 + ','+linesplit.y5));
-//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
-//        linePath.setAttribute('d', 'M 0 0 L 60 0');
-        var str = `<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>`;
-       //var str = `<!--<path d="M2,2 L2,13 L8,7 L2,2" style="fill: #000000;" class="pathSvg"/>`+`<animateMotiondur = "3s"repeatCount ="indefinite"rotate = "auto"path = "M100 150 L200 50 L300 150 L400 50 Z" />`+`</path>-->`
+        animateMotion.setAttribute('path','M'+(linesplit.x1+8)+','+(y1)+' '+(linesplit.x2+8)+','+(y2)+' '+(linesplit.x3-8)+','+(y3)+' '+(x4)+','+(y4)+' '+(x5)+','+(y5))
+        animateMotion.setAttribute('begin','0s')
+        animateMotion.setAttribute('dur','3s')
+        animateMotion.setAttribute('rotate','auto')
+        animateMotion.setAttribute('speed','200')
+        animateMotion.setAttribute('repeatCount','indefinite')
+        line.setAttribute('d', 'M2,2 L2,13 L8,7 L2,2');
+        line.setAttribute('fill', '#fff');
+        line.append(animateMotion)
         document.body.getElementsByTagName('svg')[0].appendChild(linePath);
-        document.body.getElementsByTagName('svg')[0].append(str);
+        document.body.getElementsByTagName('svg')[0].append(line);
     }
     function createLine4(linesplit) {
         var linePath = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-        linePath.setAttribute("marker-end","url(#markerArrow)");
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        var animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+        linePath.setAttribute('marker-end',"url(#markerArrow)");
         linePath.setAttribute('fill', 'none');
-        linePath.setAttribute('stroke', '#000000');
-        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4));
-//        linePath.setAttribute("d","M"+ (linesplit.x + ' '+linesplit.y) +"L"+ (linesplit.xto+' '+linesplit.yto));
-//        linePath.setAttribute('d', 'M 0 0 L 60 0');
-        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
-    }
+        linePath.setAttribute('stroke', '#fff');
+        var x1,x2,x3,x4,x5,y1,y2,y3,y4,y5
 
-
-    function createNode2() {
-        var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        var svgDom = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-
-        svgDom.setAttribute('width', '100');
-        svgDom.setAttribute('height', '100');
-        svgDom.setAttribute("x", '120');
-        svgDom.setAttribute("y", '120');
-
-        svgDom.setAttribute("fill", "#FB923F");//0表示未通过矩形的填充颜色为黄
-        text.setAttribute("x", '20');
-        text.setAttribute("y", '20');
-        text.setAttribute("text-anchor", "middle");
-        text.style.fontSize = "0.9em";
-        text.textContent = '神经病';
-        svgDom.addEventListener("click", function () {
-            console.log(this)
-        });
-        document.body.getElementsByTagName('svg')[0].appendChild(svgDom);
-        document.body.getElementsByTagName('svg')[0].appendChild(text);
-    }
-    function prevSibling(node) {
-        var tempFirst = node.parentNode.firstChild;
-        if (node == tempFirst) return null;
-        var tempObj = node.previousSibling;
-        while (tempObj.nodeType != 1 && tempObj.previousSibling != null) {
-            tempObj = tempObj.previousSibling;
+        if(linesplit.y1<linesplit.y2){
+            y1 = linesplit.y1;
+        }else {
+            if(linesplit.x1<linesplit.x2){
+                y1 = linesplit.y1;
+                y2 = linesplit.y2;
+            }else {
+                y1 = linesplit.y1;
+                y2 = linesplit.y2;
+            }
         }
-        return (tempObj.nodeType==1)? tempObj:null;
+        if(linesplit.y3<linesplit.y4){
+            y3 = linesplit.y3;
+            y4 = linesplit.y4;
+        }else {
+            y3 = linesplit.y3-8;
+            y4 = linesplit.y4-8;
+            if(linesplit.x3<linesplit.x4){
+                y3 = linesplit.y3-8;
+                y4 = linesplit.y4-8;
+            }else {
+                y3 = linesplit.y3+8;
+                y4 = linesplit.y4+8;
+            }
+        }
+        //控制竖线
+        if(y3>y2){
+            x3 = linesplit.x3+8;
+            x2 = linesplit.x2+8;
+        }else{
+            x3 = linesplit.x3-8;
+            x2 = linesplit.x2-8;
+        }
+        x1 = linesplit.x1+8
+        if(x2>x1){
+            y1 = linesplit.y1-8;
+            y2 = linesplit.y2-8;
+        }else{
+            y1 = linesplit.y1+8;
+            y2 = linesplit.y2+8;
+        }
+        linePath.setAttribute("points", (linesplit.x1 + ','+linesplit.y1)+' '+(linesplit.x2 + ','+linesplit.y2)+' '+(linesplit.x3 + ','+linesplit.y3)+' '+(linesplit.x4 + ','+linesplit.y4));
+        animateMotion.setAttribute('path','M'+(x1)+','+(y1)+' '+(x2)+','+(y2)+' '+(x3)+','+(y3)+' '+(linesplit.x4)+','+(y4))
+        animateMotion.setAttribute('begin','0s')
+        animateMotion.setAttribute('dur','3s')
+        animateMotion.setAttribute('rotate','auto')
+        animateMotion.setAttribute('repeatCount','indefinite')
+        line.setAttribute('d', 'M2,2 L2,13 L8,7 L2,2');
+        line.append(animateMotion)
+        line.setAttribute('fill', '#fff');
+        document.body.getElementsByTagName('svg')[0].appendChild(linePath);
+        document.body.getElementsByTagName('svg')[0].append(line);
     }
+    // 深拷贝
     function deepClone(obj) {
         var newObj = obj instanceof Array ? [] : {};
         if(typeof obj!='object'){
